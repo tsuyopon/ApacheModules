@@ -1,0 +1,27 @@
+自動生成されるApacheModuleのスケルトンプログラム
+  /helloworldにアクセスするとモジュール側でメッセージを表示しているだけ
+
+*** SETUP ApacheModule Development Environment
+$ cat /etc/redhat-release 
+Fedora release 17 (Beefy Miracle)
+$ sudo yum install httpd httpd-tools httpd-devel
+
+*** CREATE SKELTON
+$ apxs -n helloworld -g
+Creating [DIR]  helloworld
+Creating [FILE] helloworld/Makefile
+Creating [FILE] helloworld/modules.mk
+Creating [FILE] helloworld/mod_helloworld.c
+Creating [FILE] helloworld/.deps
+$ gmake
+$ sudo apxs -c -i mod_helloworld.c
+$ sudo vim /etc/httpd/conf/httpd.conf
+#   httpd.conf
+LoadModule helloworld_module modules/mod_helloworld.so
+<Location /helloworld>
+    SetHandler helloworld
+</Location>
+$ sudo apachectl restart
+
+*** CLEAN
+$ make clean
