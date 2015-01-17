@@ -19,7 +19,7 @@
 To Access mod_example, access below url.
 	http://<servername>/example-info
 
-"Example YES"$B$r(B"Example NO"$B$HJQ99$7$F%"%/%;%9$9$k$H=PNO$5$l$kFbMF(B($B$D$^$j8F$S=P$5$l$?4X?t(B)$B$KJQ2=$,$"$k$3$H$r3NG'$7$F$/$@$5$$!#(B
+"Example YES"を"Example NO"と変更してアクセスすると出力される内容(つまり呼び出された関数)に変化があることを確認してください。
 
 *** Information about mod_example
   http://httpd.apache.org/docs/2.2/mod/mod_example.html
