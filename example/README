@@ -1,0 +1,25 @@
+*** Original Source Code
+	httpd-2.2.26/modules/experimental/mod_example.c
+
+*** COMPILE
+  $ apxs -c mod_example.c
+  $ apixs -c -i mod_example.c
+  $ vim /etc/httpd/conf/httpd.conf
+    ### add here
+    LoadModule example_module modules/mod_example.so
+    <Location /example-info>
+        SetHandler example-handler
+    	Example YES
+    </Location> 
+    AddHandler example-handler .example 
+  $ sudo apachectl restart
+
+*** How To Use
+
+To Access mod_example, access below url.
+	http://<servername>/example-info
+
+"Example YES"を"Example NO"と変更してアクセスすると出力される内容(つまり呼び出された関数)に変化があることを確認してください。
+
+*** Information about mod_example
+  http://httpd.apache.org/docs/2.2/mod/mod_example.html

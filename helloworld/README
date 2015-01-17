@@ -1,5 +1,5 @@
-$B<+F0@8@.$5$l$k(BApacheModule$B$N%9%1%k%H%s%W%m%0%i%`(B
-  /helloworld$B$K%"%/%;%9$9$k$H%b%8%e!<%kB&$G%a%C%;!<%8$rI=<($7$F$$$k$@$1(B
+自動生成されるApacheModuleのスケルトンプログラム
+  /helloworldにアクセスするとモジュール側でメッセージを表示しているだけ
 
 *** SETUP ApacheModule Development Environment
 $ cat /etc/redhat-release 
