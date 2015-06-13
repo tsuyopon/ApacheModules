@@ -1,5 +1,5 @@
 
-all: install
+all: compile
 
 install:
 	apxs -c -i mod_example.c
