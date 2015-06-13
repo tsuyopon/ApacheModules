@@ -1,4 +1,4 @@
-all: install
+all: compile
 
 compile:
 	apxs -c blog.c
